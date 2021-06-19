@@ -1,0 +1,32 @@
+body, input {
+  font-family: arial;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+  padding: 0px;
+}
+
+.editable {
+  position: relative;
+  border: 1px solid gray;
+  padding: 3px;
+}
+
+#myText {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+}
+
+.editable::after {
+  position: absolute;
+  left: 4px;
+  top: 5px;
+  content: attr(placeholder);
+  pointer-events: none;
+  opacity: 0.5;
+  z-index: 1;
+}
