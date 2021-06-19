@@ -18,12 +18,14 @@ function splitToCharacters(word){
 function appendToTextArea(){
     let lastWord;
     let totalCharacters = [];
-    while (!isTextAreaOverflow()){
+    let flag = true;
+    while (flag){
         let word = randomWord() + " ";
         wordBox.value += word;
         console.log(wordBox.value);
         if (isTextAreaOverflow()){
             lastWord = word;
+            flag = false;
             // console.log("here, lastWord: ", lastWord);
         } else {    // Only push the words BEFORE overflow
             let myCharacters = splitToCharacters(word);
