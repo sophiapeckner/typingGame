@@ -7,12 +7,22 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div id="timer">0</div>
+    <div id="timer">30</div>
+
     <div class="container">
       <div id="prompt"></div>
-      <textarea id="input"></textarea>
+      <textarea id="input" onfocus="startTimer()"></textarea>
     </div>
-    
-    <script src="/Users/sophiapeckner/git/TypingGame/scripts:/script.js"></script>
+    <br>
+    <div id="myWPM"></div>
+    <br>
+    <iframe id="songPlayer" width="560" height="315" src=""></iframe>
+
+    <!-- <button onclick="reset()" type="reset">Reset</button> -->
+    <br>
+    <img src="https://www.iconninja.com/files/372/834/510/reset-icon.png" width="40" onclick="reset()">
+
+    <script src="./song.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
