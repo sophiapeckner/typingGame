@@ -1,32 +1,77 @@
-body, input {
-  font-family: arial;
-  font-size: 14px;
+* {
+  box-sizing: border-box;
 }
 
-textarea {
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  background-color: #EDF6F9;
+}
+
+.container {
+  background-color: #83C5BE;
+  border-radius: .5rem;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#timer {
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: #006D77;
+}
+
+#prompt, #input {
+  width: 80%;
+  text-align: left;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+
+#input {
   resize: none;
-  padding: 0px;
+  height: 10rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  border: 2px solid #83C5BE;
+  outline: none;
+  border-radius: .5rem;
 }
 
-.editable {
-  position: relative;
-  border: 1px solid gray;
-  padding: 3px;
+#input:focus {
+  border-color: #006D77;
 }
 
-#myText {
-  position: relative;
-  border: none;
-  background-color: transparent;
-  width: 100%;
+#myWPM {
+  font-size: 2rem;
+  color: #006D77;
 }
 
-.editable::after {
-  position: absolute;
-  left: 4px;
-  top: 5px;
-  content: attr(placeholder);
-  pointer-events: none;
-  opacity: 0.5;
-  z-index: 1;
+button {
+  margin-top: 1.5rem;
+}
+
+iframe {
+  height: 3rem;
+}
+/* span {
+  flex-wrap: nowrap;
+} */
+
+.incorrect {
+  color: red;
+  text-decoration: solid;
+}
+
+.correct {
+  color: green;
 }
