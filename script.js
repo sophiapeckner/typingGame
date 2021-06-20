@@ -49,7 +49,7 @@ function checkInput() {
 
 // https://stackoverflow.com/questions/31559469/how-to-create-a-simple-javascript-timer
 function startTimer(){
-    let sec = 5
+    let sec = 30
     var timer = setInterval(function(){
         TIMER.innerHTML = sec
         sec--
